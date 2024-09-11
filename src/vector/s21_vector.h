@@ -5,8 +5,6 @@
 #include <initializer_list>
 #include <iostream>
 
-// todo | test | complete | refactor | fix
-
 namespace s21 {
 template <class T>
 class vector {
@@ -20,41 +18,41 @@ class vector {
   using size_type = size_t;
 
   //  Vector Member functions
-  vector();                                                // complete
-  vector(size_type n);                                     // complete
-  vector(std::initializer_list<value_type> const &items);  // complete
-  vector(const vector &v);                                 // complete
-  vector(vector &&v) noexcept;                             // complete
+  vector();
+  vector(size_type n);
+  vector(std::initializer_list<value_type> const &items);
+  vector(const vector &v);
+  vector(vector &&v) noexcept;
   ~vector();
 
-  vector &operator=(vector &&v) noexcept;  // complete
+  vector &operator=(vector &&v) noexcept;
 
   //  Vector Element access
-  reference at(size_type pos);          // complete
-  reference operator[](size_type pos);  // complete
-  const_reference front();              // complete
-  const_reference back();               // complete
-  T *data();                            // complete
+  reference at(size_type pos);
+  reference operator[](size_type pos);
+  const_reference front();
+  const_reference back();
+  T *data();
 
   //  Vector Iterators
-  iterator begin();  // complete
-  iterator end();    // complete
+  iterator begin();
+  iterator end();
 
   //  Vector Capacity
-  bool empty();                  // complete
-  size_type size();              // complete
-  size_type max_size();          // complete
-  void reserve(size_type size);  // complete
-  size_type capacity();          // complete
-  void shrink_to_fit();          // complete
+  bool empty();
+  size_type size();
+  size_type max_size();
+  void reserve(size_type size);
+  size_type capacity();
+  void shrink_to_fit();
 
   //  Modifiers
-  void clear();                                          // complete
-  iterator insert(iterator pos, const_reference value);  // complete
-  void erase(iterator pos);                              // complete
-  void push_back(const_reference value);                 // complete
-  void pop_back();                                       // complete
-  void swap(vector &other);                              // complete
+  void clear();
+  iterator insert(iterator pos, const_reference value);
+  void erase(iterator pos);
+  void push_back(const_reference value);
+  void pop_back();
+  void swap(vector &other);
 
   void fill();
 
@@ -69,7 +67,7 @@ class vector {
   size_type capacity_{};
   T *begin_{};
 
-  void redistribute();  // complete
+  void redistribute();
 };
 
 // CONSTRUCTOR

@@ -1,7 +1,5 @@
 #include <gtest/gtest.h>
 
-#include <map>
-
 #include "s21_map.h"
 
 TEST(mapTest, DefaultConstructorString) {

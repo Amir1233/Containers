@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "s21_containersplus.h"
+#include "s21_multiset.h"
 
 TEST(multisetTest, DefaultConstructor) {
   s21::multiset<int> ms;

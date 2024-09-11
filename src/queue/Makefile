@@ -10,11 +10,11 @@ endif
 all: test style check clean
 
 test:
-	$(CXX) $(CXXFLAGS) tree_test.cc $(TEST_FLAGS)
+	$(CXX) $(CXXFLAGS) test_queue.cc $(TEST_FLAGS)
 	./test
 
 gcov-report:
-	$(CXX) --coverage $(CXXFLAGS) tree_test.cc $(TEST_FLAGS) -o test
+	$(CXX) --coverage $(CXXFLAGS) test_queue.cc $(TEST_FLAGS) -o test
 	./test
 	@lcov -t "stest" -o s21_test.info --no-external -c -d . --ignore-errors inconsistent
 	@genhtml -o report s21_test.info

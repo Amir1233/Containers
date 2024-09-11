@@ -19,33 +19,33 @@ class multiset {
   using const_iterator = typename BinaryTree<Key>::const_iterator;
   using size_type = std::size_t;
 
-  // Конструкторы
+  // Constructors
   multiset();
   multiset(std::initializer_list<value_type> const& items);
   multiset(const multiset& ms);
   multiset(multiset&& ms);
   ~multiset();
 
-  // Операторы
+  // Operators
   multiset& operator=(multiset&& ms);
 
-  // Итераторы
+  // Iterator
   iterator begin();
   iterator end();
 
-  // Ёмкость
+  // Capacity
   bool empty() const;
   size_type size() const;
   size_type max_size() const;
 
-  // Модификаторы
+  // Modifiers
   void clear();
   iterator insert(const value_type& value);
   void erase(iterator pos);
   void swap(multiset& other);
   void merge(multiset& other);
 
-  // Операции поиска
+  // Search operations
   size_type count(const key_type& key) const;
   iterator find(const key_type& key);
   bool contains(const key_type& key) const;
@@ -60,7 +60,7 @@ class multiset {
   BinaryTree<Key> tree_;
 };
 
-// Реализация функций
+// Realization of functions
 
 template <typename Key>
 multiset<Key>::multiset() : tree_() {}

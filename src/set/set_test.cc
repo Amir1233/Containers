@@ -1,7 +1,5 @@
 #include <gtest/gtest.h>
 
-#include <set>
-
 #include "s21_set.h"
 
 TEST(SetConstructorTest, DefaultConstructor) {
